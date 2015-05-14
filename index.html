@@ -45,32 +45,36 @@ transparently compiled into the native machine code, resulting in
 performance HIGHER that for most C written interpreters (plus JEL do
 not require recompilation when transferred from platform to platform).
 
-<P>The complete list of JEL <A HREF="manual.html#AEN10">features</A>
+<P>The complete list of JEL <A HREF="manual.html#idp2460496">features</A>
 is given in its <A HREF="manual.html">manual</A>.
 
-<H2>New features in the last version 2.0.1</H2>
+<H2>New features in the last version 2.0.2</H2>
 
-<P>GPLv3 license; security context inheritance, allowing for seamless usage
-in signed Java Applets (or other environment with SecurityManager enabled).
+<P>Relaxed locking in JEL classloader to work around the deadlocks 
+in conjunction with Oracle JRockit JVM; parser now ignores the
+TAB character; the range of hexadecimal and octal integer literals is
+extended; provide an alternative JDK5-compiled JAR to further reduce the 
+library size.
 
-<H2>Download JEL (Oct 12, 2007 version 2.0.1)</H2>
+<H2>Download JEL (May 14, 2015 version 2.0.2)</H2>
 
 <P> Be sure You have read and understand the terms of the <A
 HREF="license.txt">GNU General Public License</A>.
 
-<P> JEL is now (since the version 2.0.1) is licensed under GPLv3.
+<P> Since the version 2.0.1 JEL is licensed under GPLv3.
 JEL is available in two forms:
 <UL>
 
-<LI> For UNIX download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.1.tar.gz">
-<TT>jel-2.0.1.tar.gz</TT></A> (489,238 bytes compressed, about 2.1 Mb
+<LI> For UNIX download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.2.tar.gz">
+<TT>jel-2.0.2.tar.gz</TT></A> ( bytes compressed, about 2.2 Mb
 uncompressed)
 
-<LI> For Windows download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_1.zip">
-<TT>jel-2_0_1.zip</TT></A> (651,779 bytes compressed, about 2.1 Mb
+<LI> For Windows download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_2.zip">
+<TT>jel-2_0_2.zip</TT></A> (537952 bytes compressed, about 2.2 Mb
 uncompressed)
 
-<LI> The size of the jel.jar (the library itself) is 33,790 bytes.
+<LI> The size of the jel.jar (the library itself) is 36,641 bytes (33,922 
+for the JDK5-compiled version).
 </UL>
 
 <P>Contents of both archives is exactly the same.
@@ -81,25 +85,26 @@ uncompressed)
 
 <H2>Old releases</H2>
 <P>
+2.0.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.1.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_1.zip">zip</A>);
 2.0.0 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.0.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_0.zip">zip</A>);
-0.9.11 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.11.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_11.zip">zip</A>);
-0.9.10 (parser rewrite, <A HREF="jel-0.9.10.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_10.zip">zip</A>);
-0.9.9 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.9.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_9.zip">zip</A>);
-0.9.8 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.8.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_8.zip">zip</A>);
-0.9.7 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.7.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_7.zip">zip</A>);
-0.9.6 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.6.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_6.zip">zip</A>);
-0.9.5 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.5.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_5.zip">zip</A>);
-0.9.4 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.4.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_4.zip">zip</A>);
-0.9.3 (buggy, <A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.3.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_3.zip">zip</A>);
-0.9.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.1.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_1.zip">zip</A>);
-0.9.0 (code generator rewrite, <A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.0.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_9_0.zip">zip</A>);
-0.8.3 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.3.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_8_3.zip">zip</A>);
-0.8.3-JDK1.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.3-JDK1.2.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_8_3-JDK1_2.zip">zip</A>);
-0.8.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.1.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_8_1.zip">zip</A>);
-0.8.1-JDK1.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.1-JDK1.2.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_8_1-JDK1_2.zip">zip</A>);
-0.8 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_8.zip">zip</A>);
-0.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.2.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_2.zip">zip</A>);
-0.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.1.tar.gz">.tar.gz</A>, <A HREF="http://fti.dn.ua/JEL/jel-0_1.zip">zip</A>);
+0.9.11 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.11.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_11.zip">zip</A>);
+0.9.10 (parser rewrite, <A HREF="jel-0.9.10.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_10.zip">zip</A>);
+0.9.9 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.9.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_9.zip">zip</A>);
+0.9.8 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.8.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_8.zip">zip</A>);
+0.9.7 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.7.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_7.zip">zip</A>);
+0.9.6 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.6.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_6.zip">zip</A>);
+0.9.5 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.5.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_5.zip">zip</A>);
+0.9.4 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.4.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_4.zip">zip</A>);
+0.9.3 (buggy, <A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.3.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_3.zip">zip</A>);
+0.9.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.1.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_1.zip">zip</A>);
+0.9.0 (code generator rewrite, <A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.0.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_0.zip">zip</A>);
+0.8.3 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.3.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_8_3.zip">zip</A>);
+0.8.3-JDK1.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.3-JDK1.2.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_8_3-JDK1_2.zip">zip</A>);
+0.8.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.1.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_8_1.zip">zip</A>);
+0.8.1-JDK1.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.1-JDK1.2.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_8_1-JDK1_2.zip">zip</A>);
+0.8 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.8.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_8.zip">zip</A>);
+0.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.2.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_2.zip">zip</A>);
+0.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.1.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_1.zip">zip</A>);
 
 <H2>Mailing lists</H2>
 
@@ -122,7 +127,7 @@ to this list.
 <H2>Other files related to JEL (unsupported)</H2>
 
 <DL>
-<DT><A HREF="http://fti.dn.ua/JEL/lcomp_for_JEL.tar.gz">lcomp_for_JEL.tar.gz</A> 
+<DT><A HREF="http://www.fti.dn.ua/JEL/lcomp_for_JEL.tar.gz">lcomp_for_JEL.tar.gz</A> 
 
 <DD>This is a prototype logical expressions compiler for JEL. The code
 of this prototype is now completely integrated into the main
@@ -132,7 +137,7 @@ prototype. The main logic occupies about 30 lines of code, don't be
 confused by relatively large archive size, it's parser which makes
 the archive heavier.
 
-<DT><A HREF="http://fti.dn.ua/JEL/d2i_ms_bug.tar.gz">d2i_ms_bug.tar.gz</A> 
+<DT><A HREF="http://www.fti.dn.ua/JEL/d2i_ms_bug.tar.gz">d2i_ms_bug.tar.gz</A> 
 
 <DD> This archive holds the test case for &quot;d2i instruction
 bug&quot; in Microsoft JIT for Microsoft Java. This bug makes one of
@@ -165,7 +170,7 @@ HREF="mailto:metlov@fti.dn.ua">me</A> directly if You need customized,
 supported version of JEL.
 
 <P>
-<P CLASS="Copyright"> JEL &copy; 1998 &mdash; 2009 by Konstantin L. Metlov
+<P CLASS="Copyright"> JEL &copy; 1998 &mdash; 2015 by Konstantin L. Metlov
 &lt;metlov@fti.dn.ua&gt;</P>
 </BODY>
 </HTML>

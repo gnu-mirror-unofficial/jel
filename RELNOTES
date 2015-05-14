@@ -1,30 +1,43 @@
 
-                   NEW FEATURES in version 2.0.1.
+                   NEW FEATURES in version 2.0.2.
 
-This release provides a minor feature enchancement and the license upgrade.
+This release couple of minor parser enchancements:
 
-1. GPLv3 license
+1. Relaxed locking in JEL gnu.jel.ImageLoader
+   Previous versions had loadClass method synchronized, which was working
+   well before, but started to produce deadlocks on a recent verson of 
+   Oracle JRockit JVM. I have relaxed the locking to absolute minimum now,
+   which should avoid the deadlocks and improve performance for all.
 
-  Starting with this release JEL is distributed under GNU GPLv3.
+2. Java 5 binary
+   Since the version 2.0.1 JEL is compiled by Java 6 compiler, which prevented
+   some of the Java 5 users from using the recent version of the library.
+   From now on the distribution includes lib/jel_jdk5.jar, which is built
+   from the recent codebase by Java 6 compiler, but with options to make it
+   compatible with Java 5 JVMs. Due to the fact that new Java 6 classfile
+   format added new tables for bytecode verification, jel_jdk5.jar
+   is smaller than jel.jar .
 
-2. Security context inheritance.
+   JEL itself generates bytecode in Java 5 format. The shift of classfile
+   verification processing from classloading to compilation phase, facilitated
+   by new Java 6 classfile format, does not make sense for JEL-compiled
+   expressions. They are usually compiled and loaded only once during
+   the program runtime.
 
-  JEL-compiled expressions now execute in the same security context
-  (ProtectionDomain) as JEL itself (specifically, as gnu.jel.ImageLoader
-  class). This should permit easy integration of JEL into the signed
-  web-distributed Applets, running with SecurityManager enabled. Previously
-  JEL-generated code ran as completely "untrusted". Now it is possible
-  to call protected functions (such as System.getProperty), provided they
-  are registered with gnu.jel.Library, from within JEL expressions.
+3. The TAB characher is now considered whitespace and is ignored by JEL
+   Parser .
 
-  Please be more careful now with planning abd design of your gnu.jel.Library.
+4. Hexadecimal integer literals are now allowed to overflow to
+   negative values. That is "0xFFFFFFFF" now literally means "-1"
+   instead of throwing an error.
 
+5. Some minor spelling fixes.
 
                        PLANNED FEATURES
 
 1. Allowing to call methods with variable number of arguments in JEL
    expressions.
-   
 
-October 12 2007 
+
+May 14 2015
            Konstantin Metlov.

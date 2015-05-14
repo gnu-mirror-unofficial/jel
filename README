@@ -1,5 +1,5 @@
-This document corresponds to the jel version 2.0.1
-Distribution assembled October 12 2007.
+This document corresponds to the jel version 2.0.2
+Distribution assembled May 14 2015.
 
 
 	     Welcome to Java Expressions Library (JEL) .
@@ -35,7 +35,7 @@ The structure of the distribution is following:
 	manipulation library).
 
 ./samples
-	Contains samples and test suite for JEL. Currently (version 2.0.1)
+	Contains samples and test suite for JEL. Currently (version 2.0.2)
 	there is only one sample, Calculator. If You write a simple,
 	free program, using JEL, I will be happy to put is as a
 	sample. Anyway, there are still more samples coming in the
@@ -93,8 +93,8 @@ License. This means it is "free software" (see file ./COPYING for
 precise definition). However, any program, using JEL _MUST_ be the
 "free software" as well.
 
-There are options, available, for less restrictive licensing. To find
-out more contact me (metlov@kinetic.ac.donetsk.ua) directly.
+Commercial support is available. To find out more contact 
+me (metlov@fti.dn.ua) directly.
 
 I would be very happy to consider requests for JEL enhancements and
 modifications (to fit some particular purpose), syntax of the input
@@ -102,10 +102,10 @@ language, for example, can be easily changed... Contact me directly if
 You need customized, supported version of JEL.
 
 
-(c) 1998-2007 Konstantin L. Metlov
+(c) 1998-2015 Konstantin L. Metlov <metlov@fti.dn.ua>
 
-         This software is distributed to You under the terms of the
-         GNU General Public license (GPLv3 and later). Copying and 
-	 modifications are permitted. NO WARRANTY of any kind is provided.
-	 For precise terms of the license see the file COPYING in the
-	 root of the distribution.
+    This software is distributed to You under the terms of the
+    GNU General Public license (GPLv3 and later). Copying and 
+    modifications are permitted. NO WARRANTY of any kind is provided.
+    For precise terms of the license see the file COPYING in the
+    root of the distribution.
