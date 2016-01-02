@@ -1,43 +1,33 @@
 
-                   NEW FEATURES in version 2.0.2.
+                   NEW FEATURES in version 2.1.0.
 
 This release couple of minor parser enchancements:
 
-1. Relaxed locking in JEL gnu.jel.ImageLoader
-   Previous versions had loadClass method synchronized, which was working
-   well before, but started to produce deadlocks on a recent verson of 
-   Oracle JRockit JVM. I have relaxed the locking to absolute minimum now,
-   which should avoid the deadlocks and improve performance for all.
+1. Varargs suport
+   Added support for methods with variable number of arguments. Since the
+   information about varargs is not available via reflection, the support
+   is extended to all methods having an array as their last argument. This
+   provides additional convenience, since the array argument is created
+   automatically by the compiler. The variable argument methods are subject
+   to the same method overloading rules as other methods.
 
-2. Java 5 binary
-   Since the version 2.0.1 JEL is compiled by Java 6 compiler, which prevented
-   some of the Java 5 users from using the recent version of the library.
-   From now on the distribution includes lib/jel_jdk5.jar, which is built
-   from the recent codebase by Java 6 compiler, but with options to make it
-   compatible with Java 5 JVMs. Due to the fact that new Java 6 classfile
-   format added new tables for bytecode verification, jel_jdk5.jar
-   is smaller than jel.jar .
+2. Warnings cleanup
+   Cleaned up the warnings by the JDK 7 compiler mostly by using Class<?>
+   instead of Class. However, since Java does not consider parametrized
+   types with compatible parameters compatible, this had resulted in one
+   incompatible API change: the last argument (cnmap, defining class names,
+   usable inside JEL expressions for downcasting) of the 5-argument version
+   of the gnu.jel.Library constructor now is HashMap<String,Class<?>>
+   instead of HashMap<String,Class> used previously. These types are
+   considered incompatible by javac, which produces a compiler error for
+   the code using the former definition. This error should be easy to fix.
 
-   JEL itself generates bytecode in Java 5 format. The shift of classfile
-   verification processing from classloading to compilation phase, facilitated
-   by new Java 6 classfile format, does not make sense for JEL-compiled
-   expressions. They are usually compiled and loaded only once during
-   the program runtime.
+3. Removed long deprecated gnu.jel.Library constructors.
+   Now the only way to instantiate the gnu.jel.Library is to use
+   its 5-argument constructor. The unused parameters can be simply
+   set to null (as deprecated constructors did).
 
-3. The TAB characher is now considered whitespace and is ignored by JEL
-   Parser .
+4. Some minor spelling fixes in the documentation.
 
-4. Hexadecimal integer literals are now allowed to overflow to
-   negative values. That is "0xFFFFFFFF" now literally means "-1"
-   instead of throwing an error.
-
-5. Some minor spelling fixes.
-
-                       PLANNED FEATURES
-
-1. Allowing to call methods with variable number of arguments in JEL
-   expressions.
-
-
-May 14 2015
+January 2 2016
            Konstantin Metlov.

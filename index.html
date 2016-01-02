@@ -35,7 +35,7 @@ more.... The key term above is the &quot;evaluation of the
 user-defined functions&quot;, which is exactly what JEL is supposed to
 do for You.
 
-<P> The key feature of JEL is the fact that it is a compiler !!! To
+<P> The key feature of JEL is the fact that it is a compiler ! To
 write the interpreter for expressions is the task, close to trivial
 but incurs a HUGE perfomance penalty due to the fact that Java is
 interpreted language itself. JEL, in contrary, compiles expressions
@@ -45,35 +45,33 @@ transparently compiled into the native machine code, resulting in
 performance HIGHER that for most C written interpreters (plus JEL do
 not require recompilation when transferred from platform to platform).
 
-<P>The complete list of JEL <A HREF="manual.html#idp2460496">features</A>
+<P>The complete list of JEL <A HREF="manual.html#idp2423168">features</A>
 is given in its <A HREF="manual.html">manual</A>.
 
-<H2>New features in the last version 2.0.2</H2>
+<H2>New features in the last version 2.1.0</H2>
 
-<P>Relaxed locking in JEL classloader to work around the deadlocks 
-in conjunction with Oracle JRockit JVM; parser now ignores the
-TAB character; the range of hexadecimal and octal integer literals is
-extended; provide an alternative JDK5-compiled JAR to further reduce the 
-library size.
+<P>Support for methods with variable number of arguments; warnings cleanup 
+(introduces a minor incompatible API change, hence the more significant 
+version bump); deprecated gnu.jel.Library constructors removal.
 
-<H2>Download JEL (May 14, 2015 version 2.0.2)</H2>
+<H2>Download JEL (Jan 2, 2016 version 2.1.0)</H2>
 
 <P> Be sure You have read and understand the terms of the <A
-HREF="license.txt">GNU General Public License</A>.
+HREF="license.txt">GNU General Public License</A> (GPLv3 since the version 
+2.0.1).
 
-<P> Since the version 2.0.1 JEL is licensed under GPLv3.
-JEL is available in two forms:
+<P>JEL is available in two forms:
 <UL>
 
-<LI> For UNIX download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.2.tar.gz">
-<TT>jel-2.0.2.tar.gz</TT></A> ( bytes compressed, about 2.2 Mb
+<LI> For UNIX download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2.1.0.tar.gz">
+<TT>jel-2.1.0.tar.gz</TT></A> (546,180 bytes compressed, about 3.6 Mb
 uncompressed)
 
-<LI> For Windows download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_2.zip">
-<TT>jel-2_0_2.zip</TT></A> (537952 bytes compressed, about 2.2 Mb
+<LI> For Windows download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_1_0.zip">
+<TT>jel-2_1_0.zip</TT></A> (742,941 bytes compressed, about 3.6 Mb
 uncompressed)
 
-<LI> The size of the jel.jar (the library itself) is 36,641 bytes (33,922 
+<LI> The size of the jel.jar (the library itself) is 37,958 bytes (35,117 
 for the JDK5-compiled version).
 </UL>
 
@@ -85,6 +83,7 @@ for the JDK5-compiled version).
 
 <H2>Old releases</H2>
 <P>
+2.0.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.2.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_2.zip">zip</A>);
 2.0.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.1.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_1.zip">zip</A>);
 2.0.0 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.0.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_0.zip">zip</A>);
 0.9.11 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-0.9.11.tar.gz">.tar.gz</A>, <A HREF="http://www.fti.dn.ua/JEL/jel-0_9_11.zip">zip</A>);
@@ -170,7 +169,7 @@ HREF="mailto:metlov@fti.dn.ua">me</A> directly if You need customized,
 supported version of JEL.
 
 <P>
-<P CLASS="Copyright"> JEL &copy; 1998 &mdash; 2015 by Konstantin L. Metlov
+<P CLASS="Copyright"> JEL &copy; 1998 &mdash; 2016 by Konstantin L. Metlov
 &lt;metlov@fti.dn.ua&gt;</P>
 </BODY>
 </HTML>
