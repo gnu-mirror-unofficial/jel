@@ -1,5 +1,5 @@
-This document corresponds to the jel version 2.1.0
-Distribution assembled January 2 2016.
+This document corresponds to the jel version 2.1.1
+Distribution assembled May 9 2016.
 
 
 	     Welcome to Java Expressions Library (JEL) .
@@ -35,7 +35,7 @@ The structure of the distribution is following:
 	manipulation library).
 
 ./samples
-	Contains samples and test suite for JEL. Currently (version 2.1.0)
+	Contains samples and test suite for JEL. Currently (version 2.1.1)
 	there is only one sample, Calculator. If You write a simple,
 	free program, using JEL, I will be happy to put is as a
 	sample. Anyway, there are still more samples coming in the

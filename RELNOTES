@@ -1,33 +1,24 @@
 
-                   NEW FEATURES in version 2.1.0.
+                   NEW FEATURES in version 2.1.1.
 
-This release couple of minor parser enchancements:
+1. Better error messages for numerical literal overflow.
+   Unlike the previous versions, which simply claimed that an unexpected
+   character is encountered when numerical literals were too large to fit
+   in various data types, this version returns a fully customizable error
+   messages in a number of such cases.
 
-1. Varargs suport
-   Added support for methods with variable number of arguments. Since the
-   information about varargs is not available via reflection, the support
-   is extended to all methods having an array as their last argument. This
-   provides additional convenience, since the array argument is created
-   automatically by the compiler. The variable argument methods are subject
-   to the same method overloading rules as other methods.
+2. Automatic boxing of the primitive types (and JEL reflection types).
+   JEL now automatically wraps the primitive types into the corresponding
+   Java reflection objects. Thus, it is now possible to call the function
+   func(Integer i) via the expression "func(1)". Note that in this case
+   two conversions are actually performed: 1) from byte to int (which is
+   evaluated at compile time); 2) from int to java.lang.Integer (which
+   takes place at run time).
+   Still, it is advisable to use the primitive types in your expressions
+   as much as possible for the best performance.
 
-2. Warnings cleanup
-   Cleaned up the warnings by the JDK 7 compiler mostly by using Class<?>
-   instead of Class. However, since Java does not consider parametrized
-   types with compatible parameters compatible, this had resulted in one
-   incompatible API change: the last argument (cnmap, defining class names,
-   usable inside JEL expressions for downcasting) of the 5-argument version
-   of the gnu.jel.Library constructor now is HashMap<String,Class<?>>
-   instead of HashMap<String,Class> used previously. These types are
-   considered incompatible by javac, which produces a compiler error for
-   the code using the former definition. This error should be easy to fix.
+3. Minor spelling fixes.
 
-3. Removed long deprecated gnu.jel.Library constructors.
-   Now the only way to instantiate the gnu.jel.Library is to use
-   its 5-argument constructor. The unused parameters can be simply
-   set to null (as deprecated constructors did).
+May 9 2016
 
-4. Some minor spelling fixes in the documentation.
-
-January 2 2016
-           Konstantin Metlov.
+           Konstantin L. Metlov.
