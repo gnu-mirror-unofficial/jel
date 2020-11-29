@@ -1,24 +1,35 @@
 
-                   NEW FEATURES in version 2.1.1.
+                   NEW FEATURES in version 2.1.2.
 
-1. Better error messages for numerical literal overflow.
-   Unlike the previous versions, which simply claimed that an unexpected
-   character is encountered when numerical literals were too large to fit
-   in various data types, this version returns a fully customizable error
-   messages in a number of such cases.
+1. A better overshadowing of Library functions by the dynamic variables.
+   Now it is possible to define the functions in the static or the dynamic
+   library classes with the same name as a dynamic variable. Then, calls with
+   formal parameters will be resolved to the library function, while for the
+   calls with no formal parameters the dynamic variable will take the
+   precedence as documented. (this also allows to remove an unnecessary
+   error message) Thanks to Mark Taylor for suggesting this feature !
 
-2. Automatic boxing of the primitive types (and JEL reflection types).
-   JEL now automatically wraps the primitive types into the corresponding
-   Java reflection objects. Thus, it is now possible to call the function
-   func(Integer i) via the expression "func(1)". Note that in this case
-   two conversions are actually performed: 1) from byte to int (which is
-   evaluated at compile time); 2) from int to java.lang.Integer (which
-   takes place at run time).
-   Still, it is advisable to use the primitive types in your expressions
-   as much as possible for the best performance.
+2. Stopped distributing JDK5 version of jel.jar because JDK 5 is very old and
+   its source format is not supported by modern javac anymore. If you need
+   JDK5 version of JEL please compile it yourself with older javac.
 
-3. Minor spelling fixes.
+3. Cleaned up warnings produced by JAVA 14 compiler.
 
-May 9 2016
+4. Changed code generation to use the family of static valueOf methods for
+   wrapping primitive types into Java objects instead of (now deprecated)
+   constructing these objects via the "new" operator.
+
+                   BUGS FIXED in version 2.1.2.
+
+1. JEL-generated classfiles now properly store null Strings (which may appear
+   during compile-time evaluation of static methods).
+
+2. JEL now properly boxes (into java.lang.Boolean objects) the booleans
+   resulting from logical expressions. Previously (since the boxing/primitive
+   type wrapping was introduced in version 2.1.1) logical expression boxing
+   resulted in class file verification errors: "Expecting to find unitialized
+   object on stack". This bug was reported by Mark Taylor.
+
+November 17 2020
 
            Konstantin L. Metlov.

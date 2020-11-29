@@ -48,12 +48,14 @@ not require recompilation when transferred from platform to platform).
 <P>The complete list of JEL <A HREF="manual.html#idp2423168">features</A>
 is given in its <A HREF="manual.html">manual</A>.
 
-<H2>New features in the last version 2.1.1</H2>
+<H2>New features in the last version 2.1.2</H2>
 
-<P>Parser improvements (better error messages for large integer literals);
-automatic boxing of primtive types into Java reflection objects.
+<P>overshadowing of Library functions by dynamic variables (the latter now
+take prededence over the former during the name resolution); usage of valueOf
+family of methods for constructing primitive type wrapping classes (both
+in the compiler and generated code); bugfixes (see RELEASE NOTES below).
 
-<H2>Download JEL (May 9, 2016 version 2.1.1)</H2>
+<H2>Download JEL (Nov 29, 2020 version 2.1.2)</H2>
 
 <P> Be sure You have read and understand the terms of the <A
 HREF="license.txt">GNU General Public License</A> (GPLv3 since the version 
@@ -62,16 +64,15 @@ HREF="license.txt">GNU General Public License</A> (GPLv3 since the version
 <P>JEL is available in two forms:
 <UL>
 
-<LI> For UNIX download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2.1.1.tar.gz">
-<TT>jel-2.1.1.tar.gz</TT></A> (561,071 bytes compressed, about 3.7 Mb
+<LI> For UNIX download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2.1.2.tar.gz">
+<TT>jel-2.1.2.tar.gz</TT></A> (884,228 bytes compressed, about 3 Mb
 uncompressed)
 
-<LI> For Windows download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_1_1.zip">
-<TT>jel-2_1_1.zip</TT></A> (748,585 bytes compressed, about 3.7 Mb
+<LI> For Windows download <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_1_2.zip">
+<TT>jel-2_1_2.zip</TT></A> (1,097,908 bytes compressed, about 3 Mb
 uncompressed)
 
-<LI> The size of the jel.jar (the library itself) is 38,489 bytes (35,543 
-for the JDK5-compiled version).
+<LI> The size of the jel.jar (the library itself) is 39,340 bytes.
 </UL>
 
 <P>Contents of both archives is exactly the same.
@@ -82,6 +83,7 @@ for the JDK5-compiled version).
 
 <H2>Old releases</H2>
 <P>
+2.1.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.1.1.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_1_1.zip">zip</A>);
 2.1.0 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.1.0.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_1_0.zip">zip</A>);
 2.0.2 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.2.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_2.zip">zip</A>);
 2.0.1 (<A HREF="http://ftp.gnu.org/gnu/jel/jel-2.0.1.tar.gz">.tar.gz</A>, <A HREF="http://ftp.gnu.org/gnu/jel/jel-2_0_1.zip">zip</A>);
@@ -122,6 +124,12 @@ make it to.
 Please report bugs (anything that does not work as You expect it)
 to this list.
 </DL>
+
+<H2>Contributions</H2>
+
+Tihamer Toth-Fejel contributed a
+<a href="https://github.com/Tihamer54/HelloJEL">mavenized "Hello World" Eclipse project</a>
+for JEL.
 
 <H2>Other files related to JEL (unsupported)</H2>
 
@@ -169,7 +177,7 @@ HREF="mailto:metlov@fti.dn.ua">me</A> directly if You need customized,
 supported version of JEL.
 
 <P>
-<P CLASS="Copyright"> JEL &copy; 1998 &mdash; 2016 by Konstantin L. Metlov
+<P CLASS="Copyright"> JEL &copy; 1998 &mdash; 2020 by Konstantin L. Metlov
 &lt;metlov@fti.dn.ua&gt;</P>
 </BODY>
 </HTML>
